@@ -1,0 +1,47 @@
+{
+  "total_score": 7.56,
+  "max_score": 10,
+  "step_grading": [
+    {
+      "step_id": 1,
+      "text": "Question: Factorise 4y^2 - 12y + 9",
+      "final_latex": "4y^2 - 12y + 9",
+      "base_score": 1.9,
+      "final_score": 1.9,
+      "feedback": "Correctly stated the problem."
+    },
+    {
+      "step_id": 3,
+      "text": "Observe 4y^2 = (2y)^2, 9 = 3^2 and 12y = 2 x 3 x (2y).",
+      "final_latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \times 3 \times (2y)",
+      "base_score": 1.86,
+      "final_score": 1.86,
+      "feedback": "Correct identification of the terms for the perfect square trinomial."
+    },
+    {
+      "step_id": 5,
+      "text": "4y^2 - 12y + 9 = (2y)^2 - 2 x 3 x (2y) + (3)^2",
+      "final_latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
+      "base_score": 1.9,
+      "final_score": 1.9,
+      "feedback": "Correct substitution into the identity form."
+    },
+    {
+      "step_id": 6,
+      "text": "= (2y - 3)^2 (required factorisation)",
+      "final_latex": "(2y - 3)^2",
+      "base_score": 1.9,
+      "final_score": 1.9,
+      "feedback": "Correct factorisation."
+    },
+    {
+      "step_id": 7,
+      "text": "= (2y - 2)^3 (required factorisation)",
+      "final_latex": "(2y - 2)^3",
+      "base_score": 1.74,
+      "final_score": 0,
+      "feedback": "Incorrect. This step contradicts the previous correct answer and is mathematically wrong."
+    }
+  ],
+  "overall_feedback": "The student correctly identified the perfect square trinomial and reached the correct answer in Step 6. However, they added an incorrect final step (Step 7) that invalidated the result. Marks were deducted for the final error."
+}

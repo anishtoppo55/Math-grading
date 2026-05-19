@@ -1,0 +1,207 @@
+{
+  "image": "/media/anish/HDD PART 1/backup/Anish Backup/college/6 Sem/Minor 6/multi-agent/dataset/data/images/img_0.png",
+  "problem": "Factorise 4y^2 - 12y + 9",
+  "ocr_steps": [
+    {
+      "step_id": 1,
+      "text": "Question: Factorise 4y^2 - 12y + 9",
+      "latex": "4y^2 - 12y + 9",
+      "confidence": 0.95,
+      "final_latex": "4y^2 - 12y + 9",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 0.95,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 1,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 2,
+      "text": "Answer:",
+      "latex": "",
+      "confidence": 1.0,
+      "final_latex": "",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 1.0,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 2,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 3,
+      "text": "Observe 4y^2 = (2y)^2, 9 = 3^2 and 12y = 2 x 3 x (2y).",
+      "latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \times 3 \times (2y)",
+      "confidence": 0.9,
+      "final_latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \times 3 \times (2y)",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 0.93,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 3,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 4,
+      "text": "Therefore",
+      "latex": "",
+      "confidence": 1.0,
+      "final_latex": "",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 1.0,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": false,
+        "sympy_confidence": 0.2,
+        "error": "Empty or unclear expression"
+      },
+      "verifier_validation": {
+        "step_id": 4,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 5,
+      "text": "4y^2 - 12y + 9 = (2y)^2 - 2 x 3 x (2y) + (3)^2",
+      "latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
+      "confidence": 0.95,
+      "final_latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 0.95,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 5,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 6,
+      "text": "= (2y - 3)^2 (required factorisation)",
+      "latex": "(2y - 3)^2",
+      "confidence": 0.95,
+      "final_latex": "(2y - 3)^2",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 0.95,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 6,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 7,
+      "text": "= (2y - 2)^3 (required factorisation)",
+      "latex": "(2y - 2)^3",
+      "confidence": 0.7,
+      "final_latex": "(2y - 2)^3",
+      "correction_applied": false,
+      "error_type": "none",
+      "final_confidence": 0.87,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 7,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    }
+  ],
+  "grading": {
+    "total_score": 7.56,
+    "max_score": 10,
+    "step_grading": [
+      {
+        "step_id": 1,
+        "text": "Question: Factorise 4y^2 - 12y + 9",
+        "final_latex": "4y^2 - 12y + 9",
+        "base_score": 1.9,
+        "final_score": 1.9,
+        "feedback": "Correctly stated the problem."
+      },
+      {
+        "step_id": 3,
+        "text": "Observe 4y^2 = (2y)^2, 9 = 3^2 and 12y = 2 x 3 x (2y).",
+        "final_latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \times 3 \times (2y)",
+        "base_score": 1.86,
+        "final_score": 1.86,
+        "feedback": "Correct identification of the terms for the perfect square trinomial."
+      },
+      {
+        "step_id": 5,
+        "text": "4y^2 - 12y + 9 = (2y)^2 - 2 x 3 x (2y) + (3)^2",
+        "final_latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
+        "base_score": 1.9,
+        "final_score": 1.9,
+        "feedback": "Correct substitution into the identity form."
+      },
+      {
+        "step_id": 6,
+        "text": "= (2y - 3)^2 (required factorisation)",
+        "final_latex": "(2y - 3)^2",
+        "base_score": 1.9,
+        "final_score": 1.9,
+        "feedback": "Correct factorisation."
+      },
+      {
+        "step_id": 7,
+        "text": "= (2y - 2)^3 (required factorisation)",
+        "final_latex": "(2y - 2)^3",
+        "base_score": 1.74,
+        "final_score": 0,
+        "feedback": "Incorrect. This step contradicts the previous correct answer and is mathematically wrong."
+      }
+    ],
+    "overall_feedback": "The student correctly identified the perfect square trinomial and reached the correct answer in Step 6. However, they added an incorrect final step (Step 7) that invalidated the result. Marks were deducted for the final error."
+  }
+}

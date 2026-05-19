@@ -1,0 +1,78 @@
+{
+  "problem": "Factorise 4y^2 - 12y + 9",
+  "steps": [
+    {
+      "step_id": 1,
+      "latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \\times 3 \\times (2y)",
+      "final_confidence": 0.92,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 1,
+        "verifier_confidence": 0.9,
+        "issues": [
+          "Missing word 'and' between the second and third expressions"
+        ],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 2,
+      "latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \\times 3 \\times (2y) + (3)^2",
+      "final_confidence": 0.95,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 2,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 3,
+      "latex": "(2y - 3)^2",
+      "final_confidence": 0.95,
+      "status": "trusted",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 3,
+        "verifier_confidence": 1.0,
+        "issues": [],
+        "corrected_latex": null
+      }
+    },
+    {
+      "step_id": 4,
+      "latex": "(2y - 3)^2",
+      "final_confidence": 0.72,
+      "status": "uncertain",
+      "sympy_validation": {
+        "math_valid": true,
+        "sympy_confidence": 0.9,
+        "error": null
+      },
+      "verifier_validation": {
+        "step_id": 4,
+        "verifier_confidence": 0.4,
+        "issues": [
+          "Incorrect symbols: the image shows '(2y - 2)^3' instead of '(2y - 3)^2'"
+        ],
+        "corrected_latex": "(2y - 2)^3"
+      }
+    }
+  ],
+  "final_answer": "(2y - 3)^2"
+}

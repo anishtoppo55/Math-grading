@@ -1,0 +1,40 @@
+{
+  "total_score": 6.5,
+  "max_score": 10,
+  "step_grading": [
+    {
+      "step_id": 2,
+      "text": "Observe 4y^2 = (2y)^2, 9 = 3^2 and 12y = 2 \times 3 \times (2y).",
+      "final_latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \times 3 \times (2y)",
+      "base_score": 1.9,
+      "final_score": 1.9,
+      "feedback": "Correct identification of the terms for the perfect square identity."
+    },
+    {
+      "step_id": 4,
+      "text": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
+      "final_latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
+      "base_score": 1.9,
+      "final_score": 1.9,
+      "feedback": "Correct substitution into the identity form."
+    },
+    {
+      "step_id": 5,
+      "text": "= (2y - 3)^2 (required factorisation)",
+      "final_latex": "(2y - 3)^2",
+      "base_score": 1.9,
+      "final_score": 1.9,
+      "feedback": "Correct factorisation."
+    },
+    
+    {
+      "step_id": 6,
+      "text": "= (2y - 3)^2 (required factorisation)",
+      "final_latex": "(2y - 2)^3",
+      "base_score": 0.8,
+      "final_score": 0.8,
+      "feedback": "The text is correct, but the extracted LaTeX is incorrect. Partial marks awarded due to extraction error."
+    }
+  ],
+  "overall_feedback": "The student correctly applied the perfect square trinomial identity (a-b)^2 to factorise the expression. Although the final extracted LaTeX in the last step was incorrect, the logic and the written text were accurate."
+}
