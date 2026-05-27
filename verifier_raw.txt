@@ -2,7 +2,7 @@
 [
   {
     "step_id": 1,
-    "verifier_confidence": 1.0,
+    "verifier_confidence": 0.95,
     "issues": [],
     "corrected_latex": null
   },
@@ -32,11 +32,35 @@
   },
   {
     "step_id": 6,
-    "verifier_confidence": 0.4,
+    "verifier_confidence": 0.85,
     "issues": [
-      "incorrect numbers or operators"
+      "text-latex mismatch: The image uses slashes '/' for conditional probability in the formula (e.g., P(E/T1)), whereas the extraction uses vertical bars '|'."
     ],
-    "corrected_latex": "(2y - 2)^3"
+    "corrected_latex": "P(T_1|E) = \\frac{P(T_1)P(E/T_1)}{P(E/T_1)P(T_1) + P(E/T_2)P(T_2) + P(E/T_3)P(T_3) + P(E/T_4)P(T_4)}"
+  },
+  {
+    "step_id": 7,
+    "verifier_confidence": 1.0,
+    "issues": [],
+    "corrected_latex": null
+  },
+  {
+    "step_id": 8,
+    "verifier_confidence": 1.0,
+    "issues": [],
+    "corrected_latex": null
+  },
+  {
+    "step_id": 9,
+    "verifier_confidence": 1.0,
+    "issues": [],
+    "corrected_latex": null
+  },
+  {
+    "step_id": 10,
+    "verifier_confidence": 1.0,
+    "issues": [],
+    "corrected_latex": null
   }
 ]
 ```

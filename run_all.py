@@ -25,6 +25,14 @@ logger = logging.getLogger("RunAll")
 sys.path.insert(0, OCR_DIR)
 sys.path.insert(0, GRADING_DIR)
 
+# -------- IMPORT SUBMODULES --------
+try:
+    from main_pipeline import run_pipeline as run_ocr_pipeline
+    from grading_pipeline import run_grading_pipeline
+except ImportError as e:
+    logger.error(f"Failed to import submodules: {e}")
+    sys.exit(1)
+
 
 def run_all(image_path):
     """Run full pipeline: Image → OCR → Grading → Final Report"""
@@ -44,19 +52,12 @@ def run_all(image_path):
     logger.info(">>> PHASE 1: OCR Pipeline")
     logger.info("")
 
-    # Change to OCR dir so intermediate files save there
-    original_cwd = os.getcwd()
-    os.chdir(OCR_DIR)
-
-    from main_pipeline import run_pipeline as run_ocr_pipeline
-
+    # Run OCR pipeline
     ocr_output = run_ocr_pipeline(image_path)
 
     # Save a copy to project root for easy access
-    ocr_output_path = os.path.join(OCR_DIR, "final_output.json")
+    ocr_output_path = os.path.join(PROJECT_ROOT, "final_output.json")
     logger.info(f"OCR output saved: {ocr_output_path}")
-
-    os.chdir(original_cwd)
 
     # ============================================================
     # PHASE 2: Grading Pipeline
@@ -65,13 +66,8 @@ def run_all(image_path):
     logger.info(">>> PHASE 2: Grading Pipeline")
     logger.info("")
 
-    os.chdir(GRADING_DIR)
-
-    from grading_pipeline import run_grading_pipeline
-
+    # Run grading pipeline
     grading_output = run_grading_pipeline(ocr_output_path)
-
-    os.chdir(original_cwd)
 
     # ============================================================
     # COMBINED REPORT

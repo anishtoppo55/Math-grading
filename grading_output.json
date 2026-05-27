@@ -1,40 +1,63 @@
 {
-  "total_score": 6.5,
-  "max_score": 10,
+  "total_score": 14,
+  "max_score": 14,
   "step_grading": [
     {
       "step_id": 2,
-      "text": "Observe 4y^2 = (2y)^2, 9 = 3^2 and 12y = 2 \times 3 \times (2y).",
-      "final_latex": "4y^2 = (2y)^2, 9 = 3^2, 12y = 2 \times 3 \times (2y)",
-      "base_score": 1.9,
-      "final_score": 1.9,
-      "feedback": "Correct identification of the terms for the perfect square identity."
+      "text": "Then P(T1) = 3/10, P(T2) = 1/5, P(T3) = 1/10, P(T4) = 2/5 (given)",
+      "final_latex": "P(T_1) = \\frac{3}{10}, P(T_2) = \\frac{1}{5}, P(T_3) = \\frac{1}{10}, P(T_4) = \\frac{2}{5}",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct identification of the prior probabilities."
+    },
+    {
+      "step_id": 3,
+      "text": "P(E|T1) = 1/4",
+      "final_latex": "P(E|T_1) = \\frac{1}{4}",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct identification of the conditional probability for the train."
     },
     {
       "step_id": 4,
-      "text": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
-      "final_latex": "4y^2 - 12y + 9 = (2y)^2 - 2 \times 3 \times (2y) + (3)^2",
-      "base_score": 1.9,
-      "final_score": 1.9,
-      "feedback": "Correct substitution into the identity form."
+      "text": "Similarly P(E|T2) = 1/3, P(E|T3) = 1/12, P(E|T4) = 0",
+      "final_latex": "P(E|T_2) = \\frac{1}{3}, P(E|T_3) = \\frac{1}{12}, P(E|T_4) = 0",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct identification of the conditional probabilities. Assuming P(E|T4) = 0 is appropriate as only three values were provided for four modes of transport."
     },
-    {
-      "step_id": 5,
-      "text": "= (2y - 3)^2 (required factorisation)",
-      "final_latex": "(2y - 3)^2",
-      "base_score": 1.9,
-      "final_score": 1.9,
-      "feedback": "Correct factorisation."
-    },
-    
     {
       "step_id": 6,
-      "text": "= (2y - 3)^2 (required factorisation)",
-      "final_latex": "(2y - 2)^3",
-      "base_score": 0.8,
-      "final_score": 0.8,
-      "feedback": "The text is correct, but the extracted LaTeX is incorrect. Partial marks awarded due to extraction error."
+      "text": "P(T1|E) = \\frac{P(E|T_1)P(T_1)}{P(E|T_1)P(T_1) + P(E|T_2)P(T_2) + P(E|T_3)P(T_3) + P(E|T_4)P(T_4)}",
+      "final_latex": "P(T_1|E) = \\frac{P(E|T_1)P(T_1)}{P(E|T_1)P(T_1) + P(E|T_2)P(T_2) + P(E|T_3)P(T_3) + P(E|T_4)P(T_4)}",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct application of Bayes' Theorem."
+    },
+    {
+      "step_id": 8,
+      "text": "P(T1|E) = \\frac{\\frac{3}{10} \\cdot \\frac{1}{4}}{\\frac{3}{10} \\cdot \\frac{1}{4} + \\frac{1}{5} \\cdot \\frac{1}{3} + \\frac{1}{10} \\cdot \\frac{1}{12} + \\frac{2}{5} \\cdot 0}",
+      "final_latex": "P(T_1|E) = \\frac{\\frac{3}{10} \\cdot \\frac{1}{4}}{\\frac{3}{10} \\cdot \\frac{1}{4} + \\frac{1}{5} \\cdot \\frac{1}{3} + \\frac{1}{10} \\cdot \\frac{1}{12} + \\frac{2}{5} \\cdot 0}",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct substitution of values into the formula."
+    },
+    {
+      "step_id": 9,
+      "text": "Thus, P(T1|E) = \\frac{\\frac{3}{40}}{\\frac{3}{40} + \\frac{1}{15} + \\frac{1}{120}} = \\frac{3}{6} = \\frac{1}{2}",
+      "final_latex": "P(T_1|E) = \\frac{\\frac{3}{40}}{\\frac{3}{40} + \\frac{1}{15} + \\frac{1}{120}} = \\frac{3}{6} = \\frac{1}{2}",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct calculation. The simplification (3/40) / (18/120) = (3/40) / (6/40) = 3/6 = 1/2 is mathematically sound."
+    },
+    {
+      "step_id": 10,
+      "text": "Hence, the required probability is 1/2.",
+      "final_latex": "\\frac{1}{2}",
+      "base_score": 2,
+      "final_score": 2,
+      "feedback": "Correct final answer."
     }
   ],
-  "overall_feedback": "The student correctly applied the perfect square trinomial identity (a-b)^2 to factorise the expression. Although the final extracted LaTeX in the last step was incorrect, the logic and the written text were accurate."
+  "overall_feedback": "The student correctly applied Bayes' Theorem to solve the problem. All steps, including the identification of probabilities, the formula setup, and the final arithmetic, are correct."
 }
