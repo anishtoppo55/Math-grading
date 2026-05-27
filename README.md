@@ -21,10 +21,16 @@ pip install -r requirements.txt
 # 3. Setup API key
 echo "API_KEY=your_google_genai_api_key" > .env
 
-# 4. Run on an image
-python run_all.py path/to/math_image.jpg
+# 4. Run the GUI
+python app.py
 
-# 5. View results
+# 5. Open browser and go to
+http://localhost:5000
+```
+
+**Alternative: Command-line only**
+```bash
+python run_all.py path/to/math_image.jpg
 cat combined_output.json
 ```
 
@@ -41,6 +47,8 @@ cat combined_output.json
 - 🎯 **Error Classification**: Distinguish between extraction errors and student mistakes
 - 📊 **Confidence Scoring**: Multi-agent consensus for reliable results
 - ⚡ **Fast Processing**: ~7-10 seconds per image end-to-end
+- 🌐 **Web GUI**: User-friendly Flask-based interface for easy image upload and processing
+- 📱 **Responsive Design**: Works on desktop and mobile devices
 
 ## System Architecture
 
@@ -111,6 +119,7 @@ pip install -r requirements.txt
 - `sympy` - Symbolic math
 - `google-genai` - LLM API
 - `python-dotenv` - Environment config
+- `Flask` - Web GUI framework
 
 See [requirements.txt](requirements.txt) for exact versions.
 
@@ -179,7 +188,20 @@ multi-agent/
 
 ## Usage
 
-### First Run: Test the System
+### Method 1: Web GUI (Recommended)
+
+1. **Start the Flask application**
+   ```bash
+   python app.py
+   ```
+
+2. **Access the web interface**
+   - Open your browser to `http://localhost:5000`
+   - Upload an image of handwritten math
+   - View OCR results and AI grading instantly
+   - Download results as JSON
+
+### Method 2: Command Line
 
 1. **Prepare a test image**
    - Take/find a photo of handwritten math solution

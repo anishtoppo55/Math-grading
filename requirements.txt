@@ -1,5 +1,5 @@
 # Multi-Agent Math OCR & Grading System
-# Core dependencies for image processing, LLM API, and symbolic math
+# Core dependencies for image processing, LLM API, symbolic math, and Web GUI
 
 # ===== COMPUTER VISION =====
 opencv-python==4.8.1.78          # Image preprocessing and manipulation
@@ -16,6 +16,10 @@ google-genai==0.3.0              # Google GenAI SDK for Gemini/Gemma models
 
 # ===== ENVIRONMENT & CONFIG =====
 python-dotenv==1.0.0             # Load environment variables from .env
+
+# ===== WEB GUI =====
+Flask==2.3.3                     # Web framework for GUI interface
+Werkzeug==2.3.7                  # WSGI utilities for Flask
 
 # ===== OPTIONAL: TESTING & DEVELOPMENT =====
 # Uncomment these for development and testing
